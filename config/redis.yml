@@ -1,0 +1,14 @@
+development_stat:
+  host: localhost
+
+test_stat:
+  host: localhost
+
+development:
+  host: localhost
+
+test:
+  host: localhost
+
+production:
+  host: localhost

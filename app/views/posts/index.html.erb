@@ -1,0 +1,10 @@
+<%= form_tag('/posts', method: 'get') do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= select_tag 'city_id', options_from_collection_for_select(@cities, 'id', 'name', @selected_city_id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<ul>
+  <%= render(partial: 'post', collection: @posts) %>
+</ul>

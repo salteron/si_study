@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: si
+  host: localhost
+  username: postgres
+  password: postgres
+  min_messages: warning

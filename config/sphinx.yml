@@ -1,0 +1,21 @@
+development:
+  remote: false
+  listen:
+    - '0.0.0.0:10809'        # sphinx port
+    - '0.0.0.0:9306:mysql41' # sphinxql port
+  address: localhost
+  port: 10809                # sphinx port
+  mysql41: true
+  max_matches: 5000
+  version: 2.0.3
+  mem_limit: 256M
+  write_buffer: 4M
+  attr_flush_period: 900
+  mva_updates_pool: 16M
+  rt_mem_limit: 512M
+  read_buffer: 1M
+  workers: threads
+  rt_flush_period: 43200
+  binlog_path: /home/salteron/rails_projects/si/log
+  morphology: 'lemmatize_ru_all, stem_en'
+  lemmatizer_base: /home/salteron/Downloads/sphinx-rel21/dictionaries
