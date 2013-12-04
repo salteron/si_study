@@ -1,8 +1,18 @@
 <%= form_tag('/posts', method: 'get') do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q) %>
-  <%= select_tag 'city_id', options_from_collection_for_select(@cities, 'id', 'name', @selected_city_id) %>
+  <% opts_for_select = options_for_select([['все', 0]] + @cities.map{ |c| [c.name, c.id] }, @city_id) %>
+  <%= select_tag(:city_id, opts_for_select) %>
   <%= submit_tag("Search") %>
+<% end %>
+
+<% @facets.each do |facet, facet_options| %>
+  <h5><%= "Найдено в городах:" %></h5>
+  <ul>
+  <% facet_options.each do |option, count| %>
+    <li><%= "#{@cities_h[option].name} (#{count})" %></li>
+  <% end %>
+  </ul>
 <% end %>
 
 <ul>

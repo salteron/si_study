@@ -9,6 +9,6 @@ class Post < ActiveRecord::Base
 
     set_property :rt => true
 
-    # has city_id
+    has city_id, :facet => true
   end
 end

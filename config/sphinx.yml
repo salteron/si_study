@@ -19,3 +19,5 @@ development:
   binlog_path: /home/salteron/rails_projects/si/log
   morphology: 'lemmatize_ru_all, stem_en'
   lemmatizer_base: /home/salteron/Downloads/sphinx-rel21/dictionaries
+  min_prefix_len: 4
+  enable_star: true
